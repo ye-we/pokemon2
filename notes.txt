@@ -1,0 +1,6 @@
+- npx create-t3-app@latest // to start on the right tech stack
+- publish to new github repo
+* start with what you think tends to be the hardest
+* trpc is an alternative to REST or GraphQL,  allows you to easily build & consume fully typesafe APIs without having to write an api schema or GraphQL endpoint, we just write functions and call them in the front end but have them run 
+in the backend.
+ 

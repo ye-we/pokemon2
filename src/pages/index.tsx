@@ -1,8 +1,12 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-
+import { trpc } from "@/utils/trpc";
 const Home: NextPage = () => {
+  const hello = trpc.hello.useQuery({ text: "client" });
+  console.log(hello);
+  if (!hello.data) return <div>Loading...</div>;
+  if (hello.data) return <div>{hello.data.greeting}</div>;
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center">
       <div className=" text-center text-2xl">Which Pokemon is rounder</div>
